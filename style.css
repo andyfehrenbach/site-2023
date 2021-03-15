@@ -17,11 +17,20 @@ header {
     /* background:url('minted.svg') left center no-repeat cover; */
 }
 
+.flex {
+    display: flex;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .pull-tab {
     /* background: url('pull-tab.svg') center bottom no-repeat; */
     /* background-size: cover; */
     /* padding: 2.2rem; */
-    margin-top: 33vh;
+    /* margin-top: 33vh; */
     display: block;
     width: 100%;
 }
@@ -73,9 +82,9 @@ header {
     /* clip-path: polygon(0 30%, 36% 0, 86% 0, 100% 54%, 75% 100%, 0 82%); */
     /* clip-path: url('#svgPath'); */
     /* background-color: var(--background-color); */
-    top: 50%;
+    top: 44%;
     position: fixed;
-    width: 60%;
+    width: 15rem;
     display: inline-block;
     left: 53%;
     transform: translate(-50%, -50%);
@@ -106,4 +115,10 @@ h2 {
 strong {
     margin-left: 0.5em;
     font-weight: 600;
+}
+
+@media  (min-width: 768px) {
+  .pull-tab {
+      margin-top: -37vh;
+  }      
 }
