@@ -26,15 +26,6 @@ header {
     justify-content: space-between;
 }
 
-.pull-tab {
-    /* background: url('pull-tab.svg') center bottom no-repeat; */
-    /* background-size: cover; */
-    /* padding: 2.2rem; */
-    /* margin-top: 33vh; */
-    display: block;
-    width: 100%;
-}
-
 .background {
     background:
         url("/line-art-02.a2603762.svg"),
@@ -48,6 +39,21 @@ header {
     padding-top: 100vh;
     position: relative;
 }
+
+/* Pull tab */
+.background::before {
+    content: '';
+    position: absolute;
+    display: block;
+    background: url('/pull-tab.6766a4eb.svg') center bottom no-repeat;
+    width: 100%;
+    top: 0;
+    height: calc(100vw * 0.25);
+    outline: 1px solid magenta;
+    background-size: cover;
+    transform: translateY(-100%);
+}
+    
 
 .background::after {
     content: '';
