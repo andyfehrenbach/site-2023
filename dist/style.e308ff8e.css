@@ -105,8 +105,9 @@ h2 {
     font-size: 1.3rem;
 }
 
-.yatra {
-    font-family: 'yatra one';
+.text-link {
+    color: inherit;
+    text-decoration: none;
 }
 
 .heading-text {
@@ -124,9 +125,25 @@ strong {
 }
 
 @media  (min-width: 768px) {
-  .pull-tab {
-      margin-top: -37vh;
-  }      
+
+  .flex {
+      height: 120vh;
+  }  
+  
+  .heading-text {
+      font-size: 1.8rem;
+      letter-spacing: -0.01em;
+  }
+
+  .flow-text {
+      width: 24rem;
+      padding: 6.5rem 4.5rem 5.5rem;
+  }
+
+  h2 {
+      font-size: 2.3rem;
+  }
+
 }
 
 /*# sourceMappingURL=/style.e308ff8e.css.map */
