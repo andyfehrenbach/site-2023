@@ -10,11 +10,6 @@ body {
     font-weight: 300;
     font-size: 0.5rem;
     position: relative;
-    /* background-color: #d2f7de; */
-}
-
-header {
-    /* background:url('minted.svg') left center no-repeat cover; */
 }
 
 .flex {
@@ -49,45 +44,13 @@ header {
     width: 100%;
     top: 0;
     height: calc(100vw * 0.25);
-    /* outline: 1px solid magenta; */
     background-size: cover;
     transform: translateY(-100%);
-}
-    
-
-.background::after {
-    /* content: ''; */
-    position: absolute;
-    top: 150vh;
-    width: 100%;
-    height: 200vh;
-    background: linear-gradient(var(--background-color), transparent);
-}
-
-.sr-only {
-    border: 0 !important;
-    clip: rect(1px, 1px, 1px, 1px) !important;
-    /* 1 */
-    -webkit-clip-path: inset(50%) !important;
-    clip-path: inset(50%) !important;
-    /* 2 */
-    height: 1px !important;
-    margin: -1px !important;
-    overflow: hidden !important;
-    padding: 0 !important;
-    position: absolute !important;
-    width: 1px !important;
-    white-space: nowrap !important;
-    /* 3 */
 }
 
 .flow-text {
     padding: 2.5rem;
     position: absolute;
-    /* border: 2px solid var(--text-color); */
-    /* clip-path: polygon(0 30%, 36% 0, 86% 0, 100% 54%, 75% 100%, 0 82%); */
-    /* clip-path: url('#svgPath'); */
-    /* background-color: var(--background-color); */
     top: 44%;
     position: fixed;
     width: 15rem;
