@@ -27,7 +27,7 @@ body {
         var(--background-color);
     background-size: 600vw;
     background-position:
-        22% 150vh,
+        21% 150vh,
         center top;
     background-repeat: no-repeat;
     height: 8230px;
@@ -101,7 +101,7 @@ strong {
   .background {
     background-size: 200vw;
     background-position: 44% 150vh, center top;
-    height: 730vw;
+    height: 940vw;
   }
 
   .flow-text {
