@@ -3,7 +3,10 @@
     --text-color: white;
 
     --underline-thickness: 0.1em;
-    --underline-offset: 0.1em;
+    --underline-offset: 0.05em;
+
+    --font-weight-thin: 300;
+    --font-weight-thick: 700;
 }
 
 body {
@@ -12,6 +15,7 @@ body {
     font-family: "spectral", serif;
     font-size: 0.5rem;
     position: relative;
+    -webkit-font-smoothing: antialiased;
 }
 
 .flex {
@@ -52,7 +56,6 @@ body {
 
 .flow-text {
     padding: 2.5rem;
-    position: absolute;
     top: 44%;
     position: fixed;
     width: 15rem;
@@ -60,16 +63,17 @@ body {
     left: 52%;
     transform: translate(-50%, -50%);
     padding: 6.5rem 2.5rem 5.5rem;
-    line-height: 1.3;
     background: url('/round-blob.79a38d87.svg') center center no-repeat;
     background-size: cover;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 h2 {
-    font-weight: 600;
+    font-weight: var(--font-weight-thick);
     font-size: 1.3rem;
+    line-height: 1.37;
     text-decoration: underline;
-    text-underline-offset: 0.32em;
+    text-underline-offset: 0.27em;
     text-decoration-thickness: var(--underline-thickness);
 }
 
@@ -82,21 +86,22 @@ h2 {
 }
 
 .text-link:visited {
-    text-decoration-color: var(--background-color);
+    text-decoration-color: white;
 }
 
 .heading-text {
     color: var(--background-color);
     z-index: 1;
     font-size: 0.8rem;
-    font-weight: 200;
+    font-weight: var(--font-weight-thin);
     margin-top: 1rem;
     margin-left: 1.5rem;
 }
 
 strong {
     margin-left: 0.4em;
-    font-weight: 600;
+    font-weight: var(--font-weight-thick);
+    -moz-osx-font-smoothing: grayscale;
 }
 
 @media  (min-width: 768px) {
@@ -119,7 +124,7 @@ strong {
   .flow-text {
       width: 24rem;
       padding: 9.5rem 4.9rem 10.5rem 5.5rem;  
-      left: 48%;
+      left: 50%;
     }
 
   h2 {
