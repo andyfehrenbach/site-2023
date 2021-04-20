@@ -1,0 +1,83 @@
+:root {
+    --font-dark: #000;
+}
+* {
+    font-family: 'Spectral', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+    color: var(--font-dark);
+}
+
+
+.Type-1 {
+    font-size: 5.8rem;
+    color: var(--font-dark);
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+}
+
+.Type-2 {
+    font-size: 1.9rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+.u-flex {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 10000px;
+}
+.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: calc(1800px - 4rem);
+    padding: 0 2rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+
+
+}
+
+.Header {
+    border-top: 2px solid black;
+    padding-top: 1.8rem;
+    flex-direction: row-reverse;
+}
+
+.Spot {
+    position: absolute;
+    height: 70vh;
+    width: 70vh;
+    border-radius: 50%;
+    background-color: tomato;
+    right: 0;
+    bottom: 5rem;
+    z-index: -1;
+}
+
+.Header-name {
+    flex: 1;
+}
+
+.Header-description {
+    flex: 1;
+}
+
+@media (max-width: 600px) {
+ 
+}
+
+
+/*# sourceMappingURL=/styles.6145e9cd.css.map */

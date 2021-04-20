@@ -1,0 +1,25 @@
+* {
+    font-family: 'Spectral', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+    color: var(--font-dark);
+}
+
+
+.Type-1 {
+    font-size: 5.8rem;
+    color: var(--font-dark);
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+}
+
+.Type-2 {
+    font-size: 1.9rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
