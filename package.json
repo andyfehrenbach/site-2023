@@ -1,18 +1,24 @@
 {
-  "name": "site-2021",
+  "name": "site-2022",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html",
-    "deploy": "surge"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {},
-  "devDependencies": {
-    "parcel-bundler": "^1.12.3",
+  "description": "Portfolio Site for Andy Fehrenbach",
+  "main": "index.js",
+  "dependencies": {
+    "parcel-bundler": "^1.12.5",
     "surge": "^0.22.1"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andyfehrenbach/site-2022.git"
+  },
+  "author": "Andy Fehrenbach",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andyfehrenbach/site-2022/issues"
+  },
+  "homepage": "https://github.com/andyfehrenbach/site-2022#readme"
 }
