@@ -1,3 +1,14 @@
 :root {
     --font-dark: #000;
 }
+
+@mixin circle($size) {
+	width: $size;
+	height: $size;
+    border-radius: 50%;
+}
+
+@mixin box ($size) {
+    width: $size;
+	height: $size; 
+}

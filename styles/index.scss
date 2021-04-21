@@ -1,11 +1,6 @@
 @import '_vars';
 @import '_typography';
 
-@mixin circle($size) {
-	width: $size;
-	height: $size;
-    border-radius: 50%;
-}
 
 .u-flex {
     display: flex;
