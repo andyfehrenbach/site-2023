@@ -1,0 +1,102 @@
+@import '_vars';
+@import '_typography';
+
+@mixin circle($size) {
+	width: $size;
+	height: $size;
+    border-radius: 50%;
+}
+
+.u-flex {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.u-ib {
+    display: inline-block;
+    width: auto;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 10000px;
+}
+.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: calc(1800px - 4rem);
+    padding: 0 2rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+
+
+}
+
+.Header {
+    border-top: 2px solid black;
+    padding-top: 1.8rem;
+    flex-direction: row-reverse;
+}
+
+@keyframes change-color {
+    to {
+        background-color: midnightblue;
+    }
+}
+
+.Spot {
+    position: absolute;
+    @include circle(75vh);
+    border-radius: 50%;
+    background-color: tomato;
+    right: 2rem;
+    bottom: 5rem;
+    z-index: -1;
+
+    &.is-animated {
+        animation: change-color 1s linear infinite;
+        animation-play-state: paused;
+        animation-delay: calc(var(--scroll) * -0.99s);
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+        will-change: background-color;
+    }
+}
+
+
+
+.Header-name {
+    flex: 1;
+}
+
+.Header-description {
+    flex: 1;
+}
+
+.Nav {
+    width: 37%;
+margin-left: 2rem;
+}
+
+.Nav-header {
+    margin-bottom: 1.6rem;
+}
+
+.Work-list {
+    font-size: 1.9rem;
+    padding-left: 0;
+
+    & li:not(:last-child) {
+border-bottom: 2px dotted;
+margin-bottom: 0.8rem;
+padding-bottom: 0.6rem;
+    }
+}
+
+@media (max-width: 600px) {
+ 
+}
