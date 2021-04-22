@@ -33,33 +33,53 @@ ul li a {
   text-decoration: none;
   position: relative;
 }
+ul li a::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to right, #CCB76C 20%, #D1B464);
+  left: -0.05em;
+  top: 30%;
+  bottom: 30%;
+  width: 0;
+  transition: right 300ms ease-out;
+  right: 100%;
+  transition: right 300ms ease-out;
+  transform: skewX(-13deg);
+  z-index: -1;
+}
+ul li a:hover::before {
+  width: auto;
+  right: -0.2em;
+}
 
-a[target=_blank] {
+.new-tab {
+  position: relative;
   display: flex;
 }
-a[target=_blank]::after {
+.new-tab::after {
   content: "";
-  width: 0.4em;
-  height: 0.4em;
+  width: 0.6em;
+  height: 0.6em;
   margin-left: auto;
   margin-top: auto;
   margin-bottom: auto;
   margin-right: 0.4em;
   background: black;
 }
-a[target=_blank]::before {
+.new-tab::before {
   font-family: sans-serif;
   content: "↑";
   position: absolute;
   right: 0;
   top: 50%;
-  transform: translate3d(-1px, -77.1%, 0) rotate(45deg);
+  transform: translate3d(-1px, -84.1%, 0) rotate(45deg);
 }
 
-a.is-locked {
+.is-locked {
+  position: relative;
   display: flex;
 }
-a.is-locked::before {
+.is-locked::before {
   font-family: sans-serif;
   content: "∪";
   position: absolute;
@@ -69,7 +89,7 @@ a.is-locked::before {
   font-style: normal;
   transform: rotate(180deg);
 }
-a.is-locked::after {
+.is-locked::after {
   content: "";
   width: 0.2em;
   height: 0.1em;
@@ -109,6 +129,16 @@ a.is-locked::after {
   width: auto;
 }
 
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -135,7 +165,7 @@ body {
 
 @keyframes change-color {
   to {
-    background-color: midnightblue;
+    transform: rotate(360deg);
   }
 }
 .Spot {
@@ -144,7 +174,7 @@ body {
   height: 75vh;
   border-radius: 50%;
   border-radius: 50%;
-  background-color: tomato;
+  background: radial-gradient(ellipse farthest-corner at right bottom, #CEB644 0%, #c49846 8%, #957a41 30%, #816A36 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #312916 100%);
   right: 2rem;
   bottom: 5rem;
   z-index: -1;
@@ -155,7 +185,21 @@ body {
   animation-delay: calc(var(--scroll) * -0.99s);
   animation-iteration-count: 1;
   animation-fill-mode: both;
-  will-change: background-color;
+  will-change: transform;
+}
+
+.Spot-overLayer {
+  position: absolute;
+  width: 75vh;
+  height: 75vh;
+  border-radius: 50%;
+  filter: url("#roughpaper");
+  opacity: 0.55;
+  right: 2rem;
+  bottom: 5rem;
+  z-index: -1;
+  clip-path: circle(50% at 50% 50%);
+  mix-blend-mode: multiply;
 }
 
 .Header-name {

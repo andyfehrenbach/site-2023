@@ -12,11 +12,22 @@
     width: auto;
 }
 
+.sr-only{
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+  }
+
 body {
     padding: 0;
     margin: 0;
     height: 10000px;
 }
+
 .wrapper {
     position: fixed;
     top: 0;
@@ -39,7 +50,7 @@ body {
 
 @keyframes change-color {
     to {
-        background-color: midnightblue;
+        transform: rotate(360deg);
     }
 }
 
@@ -47,7 +58,9 @@ body {
     position: absolute;
     @include circle(75vh);
     border-radius: 50%;
-    background-color: tomato;
+    background:
+        radial-gradient(ellipse farthest-corner at right bottom, #CEB644 0%, #c49846 8%, #957a41 30%, #816A36 40%, transparent 80%),
+        radial-gradient(ellipse farthest-corner at left top, #FFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #312916 100%);
     right: 2rem;
     bottom: 5rem;
     z-index: -1;
@@ -58,9 +71,24 @@ body {
         animation-delay: calc(var(--scroll) * -0.99s);
         animation-iteration-count: 1;
         animation-fill-mode: both;
-        will-change: background-color;
+        will-change: transform;
     }
 }
+
+.Spot-overLayer {
+    position: absolute;
+    @include circle(75vh);
+    filter: url("#roughpaper");
+    opacity: 0.55;
+    right: 2rem;
+    bottom: 5rem;
+    z-index: -1;
+    clip-path: circle(50% at 50% 50%);
+    mix-blend-mode: multiply;
+
+}
+
+
 
 
 
@@ -74,7 +102,7 @@ body {
 
 .Nav {
     width: 37%;
-margin-left: 2rem;
+    margin-left: 2rem;
 }
 
 .Nav-header {
@@ -86,12 +114,10 @@ margin-left: 2rem;
     padding-left: 0;
 
     & li:not(:last-child) {
-border-bottom: 2px dotted;
-margin-bottom: 0.8rem;
-padding-bottom: 0.6rem;
+        border-bottom: 2px dotted;
+        margin-bottom: 0.8rem;
+        padding-bottom: 0.6rem;
     }
 }
 
-@media (max-width: 600px) {
- 
-}
+@media (max-width: 600px) {}
