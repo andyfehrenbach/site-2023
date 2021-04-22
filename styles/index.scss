@@ -1,5 +1,6 @@
 @import '_vars';
 @import '_typography';
+@import '_adel-page';
 
 
 .u-flex {
@@ -12,15 +13,15 @@
     width: auto;
 }
 
-.sr-only{
-    clip: rect(0 0 0 0); 
+.sr-only {
+    clip: rect(0 0 0 0);
     clip-path: inset(50%);
     height: 1px;
     overflow: hidden;
     position: absolute;
-    white-space: nowrap; 
+    white-space: nowrap;
     width: 1px;
-  }
+}
 
 body {
     padding: 0;
@@ -118,6 +119,10 @@ body {
         margin-bottom: 0.8rem;
         padding-bottom: 0.6rem;
     }
+}
+
+.hidden {
+    display: none;
 }
 
 @media (max-width: 600px) {}

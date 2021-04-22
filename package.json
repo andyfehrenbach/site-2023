@@ -2,7 +2,7 @@
   "name": "site-2022",
   "version": "1.0.0",
   "description": "Portfolio Site for Andy Fehrenbach",
-  "main": "index.js",
+  "main": "index.html",
   "dependencies": {
     "parcel-bundler": "^1.12.5",
     "surge": "^0.22.1"
@@ -12,7 +12,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "deploy": "surge --domain andy-fehrenbach.surge.sh"
   },
   "repository": {
     "type": "git",
