@@ -119,6 +119,71 @@ ul li a:hover::before {
   letter-spacing: -0.02em;
 }
 
+.ProjectPage {
+  background-color: black;
+  padding-top: 4rem;
+}
+.ProjectPage * {
+  color: white;
+}
+
+.ProjectPage-header {
+  position: relative;
+}
+
+@keyframes scrollScreen {
+  to {
+    transform: translateY(-100%);
+  }
+}
+.ProjectPage-viewMaster {
+  height: 150vh;
+  width: 75%;
+  margin-left: auto;
+  overflow: hidden;
+  position: relative;
+  margin-top: 4rem;
+}
+.ProjectPage-viewMaster img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: inline-block;
+  animation: scrollScreen 1s linear infinite;
+  animation-play-state: paused;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-delay: calc(var(--scroll) * -4.5s);
+}
+
+.ProjectPage-title {
+  background-color: black;
+}
+
+.ProjectPage-kicker {
+  background-color: black;
+  position: absolute;
+  bottom: 25%;
+  z-index: 1;
+  font-size: 2rem;
+  font-weight: 200;
+  width: 55%;
+  padding: 2rem 2rem 2rem 1rem;
+  line-height: 1.2;
+}
+
+.ProjectPage-opener {
+  font-size: 3rem;
+  padding: 2rem;
+  font-weight: 200;
+  line-height: 1.3;
+  width: 75%;
+}
+
+.is-ruled {
+  border-top: 2px solid currentColor;
+}
+
 .u-flex {
   display: flex;
   flex-flow: row wrap;
@@ -127,6 +192,14 @@ ul li a:hover::before {
 .u-ib {
   display: inline-block;
   width: auto;
+}
+
+.u-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .sr-only {
@@ -146,24 +219,19 @@ body {
 }
 
 .wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   max-width: calc(1800px - 4rem);
   padding: 0 2rem;
   margin: 0 auto;
-  margin-top: 2rem;
+  padding-top: 2rem;
 }
 
 .Header {
-  border-top: 2px solid black;
+  border-top: 2px solid currentColor;
   padding-top: 1.8rem;
   flex-direction: row-reverse;
 }
 
-@keyframes change-color {
+@keyframes rotate {
   to {
     transform: rotate(360deg);
   }
@@ -180,12 +248,11 @@ body {
   z-index: -1;
 }
 .Spot.is-animated {
-  animation: change-color 1s linear infinite;
+  animation: rotate 1s linear infinite;
   animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -0.99s);
   animation-iteration-count: 1;
   animation-fill-mode: both;
-  will-change: transform;
+  animation-delay: calc(var(--scroll) * -0.99s);
 }
 
 .Spot-overLayer {
@@ -224,7 +291,7 @@ body {
   padding-left: 0;
 }
 .Work-list li:not(:last-child) {
-  border-bottom: 2px dotted;
+  border-bottom: 1px dotted currentColor;
   margin-bottom: 0.8rem;
   padding-bottom: 0.6rem;
 }

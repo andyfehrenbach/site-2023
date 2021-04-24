@@ -13,6 +13,14 @@
     width: auto;
 }
 
+.u-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
 .sr-only {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
@@ -23,6 +31,8 @@
     width: 1px;
 }
 
+
+
 body {
     padding: 0;
     margin: 0;
@@ -30,26 +40,21 @@ body {
 }
 
 .wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     max-width: calc(1800px - 4rem);
     padding: 0 2rem;
     margin: 0 auto;
-    margin-top: 2rem;
+    padding-top: 2rem;
 
 
 }
 
 .Header {
-    border-top: 2px solid black;
+    @include rule-large(top);
     padding-top: 1.8rem;
     flex-direction: row-reverse;
 }
 
-@keyframes change-color {
+@keyframes rotate {
     to {
         transform: rotate(360deg);
     }
@@ -67,12 +72,9 @@ body {
     z-index: -1;
 
     &.is-animated {
-        animation: change-color 1s linear infinite;
-        animation-play-state: paused;
-        animation-delay: calc(var(--scroll) * -0.99s);
-        animation-iteration-count: 1;
-        animation-fill-mode: both;
-        will-change: transform;
+       @include scrollBasedAnimate(rotate);
+       animation-delay: calc(var(--scroll) * -0.99s);
+ 
     }
 }
 
@@ -115,7 +117,7 @@ body {
     padding-left: 0;
 
     & li:not(:last-child) {
-        border-bottom: 2px dotted;
+        @include rule-small(bottom);
         margin-bottom: 0.8rem;
         padding-bottom: 0.6rem;
     }

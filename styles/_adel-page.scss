@@ -1,0 +1,69 @@
+.ProjectPage {
+    background-color: black;
+    padding-top: 4rem;
+
+    & * {
+        color: white;
+    }
+}
+
+.ProjectPage-header {
+    position: relative;
+
+    
+
+}
+
+@keyframes scrollScreen {
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+.ProjectPage-viewMaster {
+    height: 150vh;
+    width: 75%;
+    margin-left: auto;
+    overflow: hidden;
+    position: relative;
+    margin-top: 4rem;
+
+    & img {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        display: inline-block;
+
+        @include scrollBasedAnimate(scrollScreen);
+        animation-delay: calc(var(--scroll) * -4.5s);
+
+    }
+}
+
+.ProjectPage-title {
+    background-color: black;
+}
+
+.ProjectPage-kicker {
+    background-color: black;
+    position: absolute;
+    bottom: 25%;
+    z-index: 1;
+    font-size: 2rem;
+    font-weight: 200;
+    width: 55%;
+    padding: 2rem 2rem 2rem 1rem;
+    line-height: 1.2;
+}
+
+.ProjectPage-opener {
+    font-size: 3rem;
+    padding: 2rem;
+    font-weight: 200;
+    line-height: 1.3;
+    width: 75%;
+}
+
+.is-ruled {
+    @include rule-large(top);
+}

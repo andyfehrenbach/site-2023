@@ -12,3 +12,18 @@
     width: $size;
 	height: $size; 
 }
+
+@mixin scrollBasedAnimate ($keyframe) {
+    animation: $keyframe 1s linear infinite;
+    animation-play-state: paused;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@mixin rule-large ($tblr) {
+   border-#{$tblr}: 2px solid currentColor; 
+}
+
+@mixin rule-small ($tblr) {
+   border-#{$tblr}: 1px dotted currentColor; 
+}
