@@ -62,8 +62,49 @@
     font-weight: 200;
     line-height: 1.3;
     width: 75%;
+    letter-spacing: -0.04em;
+    margin-bottom: 4rem;
 }
 
 .is-ruled {
     @include rule-large(top);
+    padding-top: 1.8rem;
+}
+
+figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+figcaption {
+    padding-top: 1rem;
+}
+
+img {
+    display: inline-block;
+    width: 100%;
+}
+
+.ProjectPage-imageGrid {
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 8rem;
+    column-gap: 4rem;
+
+    & .full-col {
+        grid-column-end: span 2;
+    }
+}
+
+.push-down {
+    margin-top: 14rem;
+}
+
+@media screen and (max-width: 550px) {
+    .ProjectPage-imageGrid {
+        display: block;
+    }
 }
