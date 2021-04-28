@@ -55,7 +55,7 @@ body {
 }
 
 @keyframes rotate {
-    to {
+    50% {
         transform: rotate(360deg);
     }
 }
