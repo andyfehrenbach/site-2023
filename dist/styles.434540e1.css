@@ -120,8 +120,20 @@ ul li a:hover::before {
 }
 
 .Type-4 {
-  font-size: 1.4rem;
-  letter-spacing: -0.01em;
+  font-size: 2.4rem;
+  letter-spacing: -0.03em;
+  line-height: 1.3;
+}
+
+.Type-5 {
+  font-size: 3rem;
+  font-weight: 200;
+  letter-spacing: -0.04em;
+  line-height: 1.3;
+}
+
+p {
+  margin-top: 5rem;
 }
 
 .ProjectPage {
@@ -130,6 +142,9 @@ ul li a:hover::before {
 }
 .ProjectPage * {
   color: white;
+}
+.ProjectPage section {
+  margin-bottom: 10rem;
 }
 
 .ProjectPage-header {
@@ -142,7 +157,7 @@ ul li a:hover::before {
   }
 }
 .ProjectPage-viewMaster {
-  height: 150vh;
+  height: 115vh;
   width: 75%;
   margin-left: auto;
   overflow: hidden;
@@ -158,7 +173,7 @@ ul li a:hover::before {
   animation-play-state: paused;
   animation-iteration-count: 1;
   animation-fill-mode: both;
-  animation-delay: calc(var(--scroll) * -4.5s);
+  animation-delay: calc(var(--scroll) * -4.3s);
 }
 
 .ProjectPage-title {
@@ -168,23 +183,18 @@ ul li a:hover::before {
 .ProjectPage-kicker {
   background-color: black;
   position: absolute;
-  bottom: 25%;
+  bottom: -1.6rem;
   z-index: 1;
-  font-size: 2rem;
   font-weight: 200;
-  width: 55%;
-  padding: 2rem 2rem 2rem 1rem;
-  line-height: 1.2;
+  width: 45%;
+  padding: 2rem 2rem 0 1rem;
+  line-height: 1.3;
 }
 
 .ProjectPage-opener {
-  font-size: 3rem;
   padding: 2rem;
-  font-weight: 200;
-  line-height: 1.3;
   width: 75%;
-  letter-spacing: -0.04em;
-  margin-bottom: 4rem;
+  margin-bottom: 10rem;
 }
 
 .is-ruled {
@@ -194,13 +204,10 @@ ul li a:hover::before {
 
 figure {
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 figcaption {
-  padding-top: 1rem;
+  padding-top: 3rem;
 }
 
 img {
