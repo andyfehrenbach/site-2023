@@ -56,7 +56,31 @@ body {
 
 @keyframes rotate {
     50% {
+        transform: rotate(180deg);
+        @include circle(75vh);
+        bottom: 5rem;
+        right: 2rem;
+    }
+
+    100% {
         transform: rotate(360deg);
+        @include circle(125vh);
+        bottom: -12.5vh;
+        right: -25%;
+    }
+}
+
+@keyframes rotate-overlayer {
+    50% {
+        @include circle(75vh);
+        bottom: 5rem;
+        right: 2rem;
+    }
+
+    100% {
+        @include circle(125vh);
+        bottom: -12.5vh;
+        right: -25%;
     }
 }
 
@@ -89,6 +113,12 @@ body {
     clip-path: circle(50% at 50% 50%);
     mix-blend-mode: multiply;
 
+    &.is-animated {
+        @include scrollBasedAnimate(rotate-overlayer);
+        animation-delay: calc(var(--scroll) * -0.99s);
+  
+     }
+
 }
 
 
@@ -105,7 +135,6 @@ body {
 
 .Nav {
     width: 37%;
-    margin-left: 2rem;
 }
 
 .Nav-header {
