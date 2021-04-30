@@ -41,7 +41,7 @@ a::before {
 }
 a:hover::before {
   width: auto;
-  right: -0.2em;
+  right: -0.05em;
 }
 
 ul {
@@ -114,7 +114,7 @@ ul li a {
   font-size: 1.9rem;
   font-weight: 300;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
 }
 
 .Type-3 {
@@ -286,6 +286,7 @@ body {
   border-top: 2px solid currentColor;
   padding-top: 1.8rem;
   flex-direction: row-reverse;
+  gap: 4rem;
 }
 
 @keyframes rotate {
@@ -303,7 +304,7 @@ body {
     height: 125vh;
     border-radius: 50%;
     bottom: -12.5vh;
-    right: -25%;
+    right: -15%;
   }
 }
 @keyframes rotate-overlayer {
@@ -319,7 +320,7 @@ body {
     height: 125vh;
     border-radius: 50%;
     bottom: -12.5vh;
-    right: -25%;
+    right: -15%;
   }
 }
 .Spot {
@@ -347,7 +348,7 @@ body {
   height: 75vh;
   border-radius: 50%;
   filter: url("#roughpaper");
-  opacity: 0.55;
+  opacity: 0.65;
   right: 2rem;
   bottom: 5rem;
   z-index: -1;

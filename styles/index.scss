@@ -52,6 +52,7 @@ body {
     @include rule-large(top);
     padding-top: 1.8rem;
     flex-direction: row-reverse;
+    gap: 4rem;
 }
 
 @keyframes rotate {
@@ -66,7 +67,7 @@ body {
         transform: rotate(360deg);
         @include circle(125vh);
         bottom: -12.5vh;
-        right: -25%;
+        right: -15%;
     }
 }
 
@@ -80,7 +81,7 @@ body {
     100% {
         @include circle(125vh);
         bottom: -12.5vh;
-        right: -25%;
+        right: -15%;
     }
 }
 
@@ -106,7 +107,7 @@ body {
     position: absolute;
     @include circle(75vh);
     filter: url("#roughpaper");
-    opacity: 0.55;
+    opacity: 0.65;
     right: 2rem;
     bottom: 5rem;
     z-index: -1;
