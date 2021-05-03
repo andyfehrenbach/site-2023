@@ -50,6 +50,7 @@ ul {
 ul li {
   font-size: inherit;
   font-style: italic;
+  padding-right: 3rem;
 }
 ul li a {
   font-size: inherit;
@@ -63,10 +64,10 @@ ul li a {
   content: "";
   width: 0.6em;
   height: 0.6em;
-  margin-left: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-right: 0.4em;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate3d(-14px, -65%, 0);
   background: black;
 }
 .new-tab::before {
@@ -75,7 +76,7 @@ ul li a {
   position: absolute;
   right: 0;
   top: 50%;
-  transform: translate3d(-1px, -84.1%, 0) rotate(45deg);
+  transform: translate3d(-3px, -33px, 0) rotate(45deg);
 }
 
 .is-locked {
@@ -86,8 +87,8 @@ ul li a {
   font-family: sans-serif;
   content: "∪";
   position: absolute;
-  right: 1.4%;
-  top: 20%;
+  right: 14px;
+  top: -3.2%;
   font-size: 41px;
   font-style: normal;
   transform: rotate(180deg);
@@ -97,10 +98,10 @@ ul li a {
   width: 0.2em;
   height: 0.1em;
   border: 7px solid black;
-  margin-left: auto;
-  margin-top: auto;
-  margin-bottom: 0;
-  margin-right: 0.3em;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate3d(-14px, -35%, 0);
 }
 
 .Type-1 {
