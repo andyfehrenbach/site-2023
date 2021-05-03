@@ -237,6 +237,13 @@ img {
   margin-top: 14rem;
 }
 
+.ArtifactsPage {
+  background: linear-gradient(#c0ab5b, #D1B464);
+}
+.ArtifactsPage * {
+  color: black;
+}
+
 @media screen and (max-width: 550px) {
   .ProjectPage-imageGrid {
     display: block;
@@ -258,6 +265,10 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.u-marginBottomRoot {
+  margin-bottom: 10rem;
 }
 
 .sr-only {
