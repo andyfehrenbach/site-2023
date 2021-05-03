@@ -1,6 +1,9 @@
 @charset "UTF-8";
 :root {
-  --font-dark: #000;
+  --blackish: #040415;
+  --whiteish: #fdf9ed;
+  --whiteish: #fffdf7;
+  --font-dark: var(--blackish);
 }
 
 * {
@@ -68,7 +71,7 @@ ul li a {
   right: 0;
   top: 50%;
   transform: translate3d(-14px, -65%, 0);
-  background: black;
+  background: var(--blackish);
 }
 .new-tab::before {
   font-family: sans-serif;
@@ -97,7 +100,7 @@ ul li a {
   content: "";
   width: 0.2em;
   height: 0.1em;
-  border: 7px solid black;
+  border: 7px solid var(--blackish);
   position: absolute;
   right: 0;
   top: 50%;
@@ -144,11 +147,11 @@ p {
 }
 
 .ProjectPage {
-  background-color: black;
+  background-color: var(--blackish);
   padding-top: 4rem;
 }
 .ProjectPage * {
-  color: white;
+  color: var(--whiteish);
 }
 .ProjectPage section {
   margin-bottom: 10rem;
@@ -184,11 +187,11 @@ p {
 }
 
 .ProjectPage-title {
-  background-color: black;
+  background-color: var(--blackish);
 }
 
 .ProjectPage-kicker {
-  background-color: black;
+  background-color: var(--blackish);
   position: absolute;
   bottom: -1.6rem;
   z-index: 1;
@@ -238,15 +241,18 @@ img {
 }
 
 .ArtifactsPage {
-  background: linear-gradient(#c0ab5b, #8f7b45);
+  background: linear-gradient(#dfbd6c, #8f7b45);
 }
 .ArtifactsPage * {
-  color: black;
+  color: var(--blackish);
 }
 
 .jpg {
-  mix-blend-mode: hard-light;
   filter: contrast(1.3) grayscale(0.85);
+  transition: filter 700ms ease-in;
+}
+.jpg:hover {
+  filter: contrast(1) grayscale(0);
 }
 
 @media screen and (max-width: 550px) {
@@ -270,6 +276,7 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
+  background: var(--whiteish);
 }
 
 .u-marginBottomRoot {
@@ -304,6 +311,11 @@ body {
   padding-top: 1.8rem;
   flex-direction: row-reverse;
   gap: 4rem;
+}
+
+.Header-description {
+  position: relative;
+  z-index: 1;
 }
 
 @keyframes rotate {
@@ -380,6 +392,27 @@ body {
   animation-delay: calc(var(--scroll) * -0.99s);
 }
 
+.cls-1,
+.cls-2 {
+  fill: none;
+  stroke-miterlimit: 10;
+}
+
+.cls-1 {
+  stroke: #65561d;
+  stroke-opacity: 1;
+}
+
+.cls-2 {
+  stroke: #fff6c7;
+  stroke-opacity: 0.4;
+}
+
+#CircleArt {
+  mix-blend-mode: hard-light;
+  transform: scale(0.97);
+}
+
 .Header-name {
   flex: 1;
 }
@@ -390,18 +423,21 @@ body {
 
 @keyframes nav-transform {
   to {
-    transform: translateY(-3rem);
+    transform: translateY(-20vh);
   }
 }
-.Nav {
+.Nav-clipper {
+  position: relative;
+  overflow: hidden;
   width: 37%;
 }
+
 .Nav.is-animated {
   animation: nav-transform 1s linear infinite;
   animation-play-state: paused;
   animation-iteration-count: 1;
   animation-fill-mode: both;
-  animation-delay: calc(var(--scroll) * -4s);
+  animation-delay: calc(var(--scroll) * -2s);
 }
 
 .Nav-header {

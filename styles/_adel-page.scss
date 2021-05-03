@@ -1,9 +1,9 @@
 .ProjectPage {
-    background-color: black;
+    background-color: var(--blackish);
     padding-top: 4rem;
 
     & * {
-        color: white;
+        color: var(--whiteish);
     }
 
     & section {
@@ -14,7 +14,7 @@
 .ProjectPage-header {
     position: relative;
 
-    
+
 
 }
 
@@ -45,11 +45,11 @@
 }
 
 .ProjectPage-title {
-    background-color: black;
+    background-color: var(--blackish);
 }
 
 .ProjectPage-kicker {
-    background-color: black;
+    background-color: var(--blackish);
     position: absolute;
     bottom: -1.6rem;
     z-index: 1;
@@ -100,16 +100,24 @@ img {
 }
 
 .ArtifactsPage {
-    background: linear-gradient( #c0ab5b, #8f7b45);
+    // background: linear-gradient(#c0ab5b, #8f7b45);
+    // background: linear-gradient(#cdb457, #8f7b45);
+    background: linear-gradient(#dfbd6c, #8f7b45);
 
     & * {
-        color: black;
+        color: var(--blackish);
     }
 }
 
 .jpg {
-    mix-blend-mode: hard-light;
+    // mix-blend-mode: hard-light;
     filter: contrast(1.3)grayscale(0.85);
+    transition:
+        filter 700ms ease-in;
+
+    &:hover {
+        filter: contrast(1)grayscale(0);
+    }
 }
 
 @media screen and (max-width: 550px) {

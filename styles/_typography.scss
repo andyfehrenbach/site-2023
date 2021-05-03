@@ -63,12 +63,12 @@ ul {
     &::after {
         content: '';
         @include box(0.6em);
-        // border: 3px solid black;
+        // border: 3px solid var(--blackish);
         position: absolute;
         right: 0;
         top: 50%;
-        transform: translate3d(-14px,-65%, 0);
-        background: black;
+        transform: translate3d(-14px, -65%, 0);
+        background: var(--blackish);
     }
 
     &::before {
@@ -102,7 +102,7 @@ ul {
         content: '';
         width: 0.2em;
         height: 0.1em;
-        border: 7px solid black;
+        border: 7px solid var(--blackish);
         position: absolute;
         right: 0;
         top: 50%;

@@ -19,6 +19,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+    background: var(--whiteish);
 }
 
 .u-marginBottomRoot {
@@ -57,6 +58,11 @@ body {
     padding-top: 1.8rem;
     flex-direction: row-reverse;
     gap: 4rem;
+}
+
+.Header-description {
+    position: relative;
+    z-index: 1;
 }
 
 @keyframes rotate {
@@ -126,6 +132,27 @@ body {
 
 }
 
+.cls-1,
+.cls-2 {
+    fill:none;
+    stroke-miterlimit:10;
+}
+
+.cls-1 {
+    stroke:rgb(101, 86, 29);
+    stroke-opacity: 1;
+}
+
+.cls-2 {
+    stroke: #fff6c7;
+    stroke-opacity: 0.4;
+}
+
+#CircleArt {
+    mix-blend-mode: hard-light;
+    transform: scale(0.97);
+}
+
 
 
 
@@ -140,16 +167,20 @@ body {
 
 @keyframes nav-transform {
     to {
-        transform: translateY(-3rem);
+        transform: translateY(-20vh);
     }
 }
 
-.Nav {
+.Nav-clipper {
+    position: relative;
+    overflow: hidden;
     width: 37%;
+}
 
+.Nav {
     &.is-animated {
         @include scrollBasedAnimate(nav-transform);
-        animation-delay: calc(var(--scroll) * -4s);
+        animation-delay: calc(var(--scroll) * -2s);
   
      }
 }

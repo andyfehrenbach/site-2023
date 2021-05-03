@@ -1,16 +1,19 @@
 :root {
-    --font-dark: #000;
+    --blackish: #040415;
+    --whiteish: #fdf9ed;
+    --whiteish: #fffdf7;
+    --font-dark: var(--blackish);
 }
 
 @mixin circle($size) {
-	width: $size;
-	height: $size;
+    width: $size;
+    height: $size;
     border-radius: 50%;
 }
 
 @mixin box ($size) {
     width: $size;
-	height: $size; 
+    height: $size;
 }
 
 @mixin scrollBasedAnimate ($keyframe) {
@@ -21,9 +24,9 @@
 }
 
 @mixin rule-large ($tblr) {
-   border-#{$tblr}: 2px solid currentColor; 
+    border-#{$tblr}: 2px solid currentColor;
 }
 
 @mixin rule-small ($tblr) {
-   border-#{$tblr}: 1px dotted currentColor; 
+    border-#{$tblr}: 1px dotted currentColor;
 }
