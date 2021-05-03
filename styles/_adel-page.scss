@@ -100,11 +100,16 @@ img {
 }
 
 .ArtifactsPage {
-    background: linear-gradient( #c0ab5b, #D1B464);
+    background: linear-gradient( #c0ab5b, #8f7b45);
 
     & * {
         color: black;
     }
+}
+
+.jpg {
+    mix-blend-mode: hard-light;
+    filter: contrast(1.3)grayscale(0.85);
 }
 
 @media screen and (max-width: 550px) {
