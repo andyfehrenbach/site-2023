@@ -1,7 +1,7 @@
 const adelPage = document.getElementById('adelPage')
 const attemptedPassword = prompt('Please enter Password');
 
-if (attemptedPassword == 'Guest@2021!') {
+if (attemptedPassword == 'Ad3lte@m') {
     adelPage.classList.remove('hidden');
 } else {
     prompt('Please try again');

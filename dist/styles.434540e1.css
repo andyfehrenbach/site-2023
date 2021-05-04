@@ -90,7 +90,7 @@ ul li a {
   font-family: sans-serif;
   content: "∪";
   position: absolute;
-  right: 14px;
+  right: 15px;
   top: -3.2%;
   font-size: 41px;
   font-style: normal;
@@ -304,6 +304,8 @@ body {
   padding: 0 4rem;
   margin: 0 auto;
   padding-top: 2rem;
+  min-height: 100vh;
+  position: relative;
 }
 
 .Header {
@@ -325,7 +327,7 @@ body {
     height: 75vh;
     border-radius: 50%;
     bottom: 5rem;
-    right: 2rem;
+    right: 4rem;
   }
   100% {
     transform: rotate(360deg);
@@ -333,7 +335,7 @@ body {
     height: 125vh;
     border-radius: 50%;
     bottom: -12.5vh;
-    right: -15%;
+    right: -35%;
   }
 }
 @keyframes rotate-overlayer {
@@ -342,14 +344,14 @@ body {
     height: 75vh;
     border-radius: 50%;
     bottom: 5rem;
-    right: 2rem;
+    right: 4rem;
   }
   100% {
     width: 125vh;
     height: 125vh;
     border-radius: 50%;
     bottom: -12.5vh;
-    right: -15%;
+    right: -35%;
   }
 }
 .Spot {
@@ -359,7 +361,7 @@ body {
   border-radius: 50%;
   border-radius: 50%;
   background: radial-gradient(ellipse farthest-corner at right bottom, #CEB644 0%, #c49846 8%, #957a41 30%, #816A36 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #312916 100%);
-  right: 2rem;
+  right: 4rem;
   bottom: 5rem;
   z-index: -1;
 }
@@ -377,12 +379,12 @@ body {
   height: 75vh;
   border-radius: 50%;
   filter: url("#roughpaper");
-  opacity: 0.65;
-  right: 2rem;
+  opacity: 0.78;
+  mix-blend-mode: color-burn;
+  right: 4rem;
   bottom: 5rem;
   z-index: -1;
   clip-path: circle(50% at 50% 50%);
-  mix-blend-mode: multiply;
 }
 .Spot-overLayer.is-animated {
   animation: rotate-overlayer 1s linear infinite;
@@ -400,12 +402,14 @@ body {
 
 .cls-1 {
   stroke: #65561d;
-  stroke-opacity: 1;
+  stroke-opacity: 0.7;
+  stroke-width: 2px;
 }
 
 .cls-2 {
   stroke: #fff6c7;
-  stroke-opacity: 0.4;
+  stroke-opacity: 0.2;
+  stroke-width: 2px;
 }
 
 #CircleArt {

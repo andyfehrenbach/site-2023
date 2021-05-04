@@ -49,8 +49,8 @@ body {
     padding: 0 4rem;
     margin: 0 auto;
     padding-top: 2rem;
-
-
+    min-height: 100vh;
+    position: relative;
 }
 
 .Header {
@@ -70,14 +70,14 @@ body {
         transform: rotate(180deg);
         @include circle(75vh);
         bottom: 5rem;
-        right: 2rem;
+        right: 4rem;
     }
 
     100% {
         transform: rotate(360deg);
         @include circle(125vh);
         bottom: -12.5vh;
-        right: -15%;
+        right: -35%;
     }
 }
 
@@ -85,13 +85,13 @@ body {
     50% {
         @include circle(75vh);
         bottom: 5rem;
-        right: 2rem;
+        right: 4rem;
     }
 
     100% {
         @include circle(125vh);
         bottom: -12.5vh;
-        right: -15%;
+        right: -35%;
     }
 }
 
@@ -102,14 +102,14 @@ body {
     background:
         radial-gradient(ellipse farthest-corner at right bottom, #CEB644 0%, #c49846 8%, #957a41 30%, #816A36 40%, transparent 80%),
         radial-gradient(ellipse farthest-corner at left top, #FFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #312916 100%);
-    right: 2rem;
+    right: 4rem;
     bottom: 5rem;
     z-index: -1;
 
     &.is-animated {
-       @include scrollBasedAnimate(rotate);
-       animation-delay: calc(var(--scroll) * -0.99s);
- 
+        @include scrollBasedAnimate(rotate);
+        animation-delay: calc(var(--scroll) * -0.99s);
+
     }
 }
 
@@ -117,35 +117,37 @@ body {
     position: absolute;
     @include circle(75vh);
     filter: url("#roughpaper");
-    opacity: 0.65;
-    right: 2rem;
+    opacity: 0.78;
+    mix-blend-mode: color-burn;
+    right: 4rem;
     bottom: 5rem;
-    z-index: -1;
+    // Allows the spot to sit under name text, but over other spot layers
+    z-index: -1; 
     clip-path: circle(50% at 50% 50%);
-    mix-blend-mode: multiply;
 
     &.is-animated {
         @include scrollBasedAnimate(rotate-overlayer);
         animation-delay: calc(var(--scroll) * -0.99s);
-  
-     }
+    }
 
 }
 
 .cls-1,
 .cls-2 {
-    fill:none;
-    stroke-miterlimit:10;
+    fill: none;
+    stroke-miterlimit: 10;
 }
 
 .cls-1 {
     stroke:rgb(101, 86, 29);
-    stroke-opacity: 1;
+    stroke-opacity: 0.7;
+    stroke-width: 2px;
 }
 
 .cls-2 {
     stroke: #fff6c7;
-    stroke-opacity: 0.4;
+    stroke-opacity: 0.2;
+    stroke-width: 2px;
 }
 
 #CircleArt {
@@ -181,8 +183,8 @@ body {
     &.is-animated {
         @include scrollBasedAnimate(nav-transform);
         animation-delay: calc(var(--scroll) * -2s);
-  
-     }
+
+    }
 }
 
 .Nav-header {
