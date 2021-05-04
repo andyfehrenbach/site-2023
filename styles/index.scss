@@ -226,16 +226,16 @@ stroke-opacity: 0.4;
 
 .wrapper {
     padding: 1rem;
-    height: 100vh;
+    // height: 100vh;
     width:100vw;
     margin: 0;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 .u-overlay, body {
     width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    // height: 100vh;
+    // overflow: hidden;
 }
 
 .Work-list { font-size: 1rem; }
@@ -246,6 +246,46 @@ stroke-opacity: 0.4;
     right: -67%;
     bottom: 15%;
     @include circle(65vh);
+}
+
+.ProjectPage-viewmaster {
+   height: 55vh; 
+
+   & img {
+    animation-delay: calc(var(--scroll) * -0.1s);
+   }
+}
+
+.ProjectPage-kicker {
+    font-size: 1.5rem;
+    width: 60%;
+}
+
+.ProjectPage-opener {
+    width: 100%;;
+}
+
+.ProjectPage-header {
+    position: static;
+
+}
+
+.push-down {
+    margin-top: 3rem;
+}
+
+figcaption {
+    padding-top: 1rem;
+}
+
+figure {
+    margin-top: 3rem;
+}
+
+
+body {
+    height: initial;
+    min-height: initial;
 }
 
 

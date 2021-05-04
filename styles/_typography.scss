@@ -92,7 +92,7 @@ ul {
         font-family: 'Lucida Grande',Geneva, Helvetica, sans-serif;
         content: '\222a';
         position: absolute;
-        right: 15px;
+        right: 14px;
         top: -3.2%;
         font-size: 41px;
         font-style: normal;
@@ -156,6 +156,8 @@ p {
     .Type-1 { font-size: 3rem; }
     .Type-2 { font-size: 0.8rem; }
     .Type-3 { font-size: 2rem; }
+    .Type-4 { font-size: 1.2rem; }
+    .Type-5 {font-size: 1.5rem; }
 
     .is-locked, .new-tab {
         &::before,
@@ -163,4 +165,10 @@ p {
             display: none;
         }
     }
+
+    p {
+        margin-top: 2rem;
+    }
+
+
 }
