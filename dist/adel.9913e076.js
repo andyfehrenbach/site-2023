@@ -122,7 +122,7 @@ var adelPage = document.getElementById('adelPage');
 var pre = document.getElementById('pre');
 var attemptedPassword = prompt('Please enter the password');
 
-if (attemptedPassword == 'Ad3lte@m') {
+if (attemptedPassword == 'Iam@guest') {
   adelPage.classList.remove('hidden');
   pre.classList.add('hidden');
 } else {

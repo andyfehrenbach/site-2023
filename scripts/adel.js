@@ -2,7 +2,7 @@ const adelPage = document.getElementById('adelPage');
 const pre = document.getElementById('pre');
 const attemptedPassword = prompt('Please enter the password');
 
-if (attemptedPassword == 'Ad3lte@m') {
+if (attemptedPassword == 'Iam@guest') {
     adelPage.classList.remove('hidden');
     pre.classList.add('hidden');
 } else {
