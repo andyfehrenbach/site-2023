@@ -150,3 +150,17 @@ ul {
 p {
     margin-top: 5rem;
 }
+
+@media screen and (max-width: 550px) {
+
+    .Type-1 { font-size: 3rem; }
+    .Type-2 { font-size: 0.8rem; }
+    .Type-3 { font-size: 2rem; }
+
+    .is-locked, .new-tab {
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+}
