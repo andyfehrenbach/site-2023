@@ -153,7 +153,7 @@ p {
   }
 
   .Type-2 {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .Type-3 {
@@ -512,7 +512,7 @@ body {
   }
 
   .Header-description {
-    width: 50%;
+    width: 65%;
   }
 
   .wrapper {
@@ -526,7 +526,11 @@ body {
   }
 
   .Work-list {
-    font-size: 1rem;
+    font-size: 1.2rem;
+  }
+  .Work-list li:not(:last-child) {
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.4rem;
   }
 
   .Nav-clipper {

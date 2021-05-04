@@ -221,7 +221,7 @@ stroke-opacity: 0.4;
 }
 
 .Header-description {
-    width: 50%;
+    width: 65%;
 }
 
 .wrapper {
@@ -238,7 +238,15 @@ stroke-opacity: 0.4;
     // overflow: hidden;
 }
 
-.Work-list { font-size: 1rem; }
+.Work-list { 
+    font-size: 1.2rem;
+    
+    & li:not(:last-child) {
+        margin-bottom: 0.6rem;
+        padding-bottom: 0.4rem;
+    }
+
+}
 
 .Nav-clipper { width: 100%; }
 
