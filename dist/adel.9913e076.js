@@ -119,10 +119,12 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"scripts/adel.js":[function(require,module,exports) {
 var adelPage = document.getElementById('adelPage');
-var attemptedPassword = prompt('Please enter Password');
+var pre = document.getElementById('pre');
+var attemptedPassword = prompt('Please enter the password');
 
 if (attemptedPassword == 'Ad3lte@m') {
   adelPage.classList.remove('hidden');
+  pre.classList.add('hidden');
 } else {
   prompt('Please try again');
   adelPage.outerHTML = "";
