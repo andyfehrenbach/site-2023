@@ -104,8 +104,11 @@ body {
     @include circle(75vh);
     border-radius: 50%;
     background:
-        radial-gradient(ellipse farthest-corner at right bottom, #CEB644 0%, #c49846 8%, #957a41 30%, #816A36 40%, transparent 80%),
-        radial-gradient(ellipse farthest-corner at left top, #FFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #312916 100%);
+        radial-gradient(circle at 40% 30%, #F7DC9DCC 0%, #AF8B4AC7 46%, #2d1e00e0 80%),
+        radial-gradient(circle at left bottom, #F7DC9D 25%, #AF8B4A69 46%, #f3c364e3 60%);
+    // background: 
+    //     radial-gradient(circle at 80% 80%, rgb(225, 188, 128) 0%, 18.0233%, rgb(163, 130, 76) 36.0465%, 68.0233%,  rgb(71, 49, 21) 100%),
+    //     radial-gradient(circle at 40% 30%, rgb(225, 188, 128) 0%, 18.0233%, rgb(163, 130, 76) 36.0465%, 68.0233%,  rgb(71, 49, 21) 100%);
     right: 4rem;
     bottom: 5rem;
     z-index: -1;
@@ -121,12 +124,12 @@ body {
     position: absolute;
     @include circle(75vh);
     filter: url("#roughpaper");
-    opacity: 0.68;
+    opacity: 0.78;
     mix-blend-mode: color-burn;
     right: 4rem;
     bottom: 5rem;
     // Allows the spot to sit under name text, but over other spot layers
-    z-index: -1; 
+    z-index: -1;
     clip-path: circle(50% at 50% 50%);
 
     &.is-animated {
@@ -142,20 +145,17 @@ body {
     stroke-miterlimit: 10;
 }
 
-.cls-1 {
-    stroke: #3d3310;
+.cls-2 {
+    stroke: #fffbf1;
     stroke-opacity: 0.6;
     stroke-width: 1px;
-}
-
-.cls-2 {
-    stroke: #fcfcfc;
-stroke-opacity: 0.4;
-    stroke-width: 1px;
+    filter:
+        drop-shadow(1px 1px 1px rgb(44, 29, 0))
+        drop-shadow(-1px -1px 1px rgb(255, 255, 255));
 }
 
 #CircleArt {
-    mix-blend-mode: hard-light;
+    mix-blend-mode: overlay;
     transform: scale(0.97);
 }
 
@@ -211,102 +211,106 @@ stroke-opacity: 0.4;
 }
 
 @media (max-width: 550px) {
-.Header {
-    display: block;
-    margin-bottom: 3rem;
-}
-
-.Header-name {
-    margin-bottom: 1rem;
-}
-
-.Header-description {
-    width: 65%;
-}
-
-.wrapper {
-    padding: 1rem;
-    // height: 100vh;
-    width:100vw;
-    margin: 0;
-    // overflow: hidden;
-}
-
-.u-overlay, body {
-    width: 100vw;
-    // height: 100vh;
-    // overflow: hidden;
-}
-
-.Work-list { 
-    font-size: 1.2rem;
-    
-    & li:not(:last-child) {
-        margin-bottom: 0.6rem;
-        padding-bottom: 0.4rem;
+    .Header {
+        display: block;
+        margin-bottom: 3rem;
     }
 
-}
+    .Header-name {
+        margin-bottom: 1rem;
+    }
 
-.Nav-clipper { width: 100%; }
+    .Header-description {
+        width: 65%;
+    }
 
-.Spot, .Spot-overLayer {
-    right: -67%;
-    bottom: 15%;
-    @include circle(65vh);
-}
+    .wrapper {
+        padding: 1rem;
+        // height: 100vh;
+        width: 100vw;
+        margin: 0;
+        // overflow: hidden;
+    }
 
-.ProjectPage-viewmaster {
-   height: 55vh; 
+    .u-overlay,
+    body {
+        width: 100vw;
+        // height: 100vh;
+        // overflow: hidden;
+    }
 
-   & img {
-    animation-delay: calc(var(--scroll) * -2.5s);
-   }
-}
+    .Work-list {
+        font-size: 1.2rem;
 
-.ProjectPage-kicker {
-    font-size: 1.5rem;
-    width: 80%;
-    position: static;
-    padding-left: 0;
-}
+        & li:not(:last-child) {
+            margin-bottom: 0.6rem;
+            padding-bottom: 0.4rem;
+        }
 
-.ProjectPage-opener {
-    width: 100%;
-    margin-bottom: 5rem;
-}
+    }
 
-.ProjectPage section {
-    margin-bottom: 5rem;
-}
+    .Nav-clipper {
+        width: 100%;
+    }
 
-.ProjectPage-header {
-    position: static;
+    .Spot,
+    .Spot-overLayer {
+        right: -67%;
+        bottom: 15%;
+        @include circle(65vh);
+    }
 
-}
+    .ProjectPage-viewmaster {
+        height: 55vh;
 
-.push-down {
-    margin-top: 3rem;
-}
+        & img {
+            animation-delay: calc(var(--scroll) * -2.5s);
+        }
+    }
 
-figcaption {
-    padding-top: 1rem;
-}
+    .ProjectPage-kicker {
+        font-size: 1.5rem;
+        width: 80%;
+        position: static;
+        padding-left: 0;
+    }
 
-figure {
-    margin-top: 3rem;
-}
+    .ProjectPage-opener {
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+
+    .ProjectPage section {
+        margin-bottom: 5rem;
+    }
+
+    .ProjectPage-header {
+        position: static;
+
+    }
+
+    .push-down {
+        margin-top: 3rem;
+    }
+
+    figcaption {
+        padding-top: 1rem;
+    }
+
+    figure {
+        margin-top: 3rem;
+    }
 
 
-body {
-    height: initial;
-    min-height: initial;
-}
+    body {
+        height: initial;
+        min-height: initial;
+    }
 
-.LandingPage .wrapper {
-    height: 100vh;
-    overflow: hidden;
-}
+    .LandingPage .wrapper {
+        height: 100vh;
+        overflow: hidden;
+    }
 
 
 
