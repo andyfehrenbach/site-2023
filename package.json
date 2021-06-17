@@ -13,7 +13,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html",
-    "deploy": "surge --domain www.andyfehrenbach.com"
+    "deploy": "surge --domain andyfehrenbach.com"
   },
   "repository": {
     "type": "git",

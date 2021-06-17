@@ -70,32 +70,19 @@ body {
 }
 
 @keyframes rotate {
-    50% {
+    100% {
         transform: rotate(180deg);
         @include circle(75vh);
         bottom: 5rem;
         right: 4rem;
     }
-
-    100% {
-        transform: rotate(360deg);
-        @include circle(125vh);
-        bottom: -12.5vh;
-        right: -35%;
-    }
 }
 
 @keyframes rotate-overlayer {
-    50% {
+    100% {
         @include circle(75vh);
         bottom: 5rem;
         right: 4rem;
-    }
-
-    100% {
-        @include circle(125vh);
-        bottom: -12.5vh;
-        right: -35%;
     }
 }
 
@@ -106,7 +93,7 @@ body {
     background:
         radial-gradient(circle at 40% 30%, #F7DC9DCC 0%, #AF8B4AC7 46%, #2d1e00e0 80%),
         radial-gradient(circle at left bottom, #F7DC9D 25%, #AF8B4A69 46%, #f3c364e3 60%);
-    // background: 
+    // background:
     //     radial-gradient(circle at 80% 80%, rgb(225, 188, 128) 0%, 18.0233%, rgb(163, 130, 76) 36.0465%, 68.0233%,  rgb(71, 49, 21) 100%),
     //     radial-gradient(circle at 40% 30%, rgb(225, 188, 128) 0%, 18.0233%, rgb(163, 130, 76) 36.0465%, 68.0233%,  rgb(71, 49, 21) 100%);
     right: 4rem;
@@ -126,29 +113,26 @@ body {
     filter: url("#roughpaper");
     opacity: 0.78;
     mix-blend-mode: color-burn;
-    right: 4rem;
-    bottom: 5rem;
+    right: 0;
+    bottom: 0;
     // Allows the spot to sit under name text, but over other spot layers
     z-index: -1;
     clip-path: circle(50% at 50% 50%);
 
-    &.is-animated {
-        @include scrollBasedAnimate(rotate-overlayer);
-        animation-delay: calc(var(--scroll) * -0.99s);
-    }
+    // &.is-animated {
+    //     @include scrollBasedAnimate(rotate-overlayer);
+    //     animation-delay: calc(var(--scroll) * -0.99s);
+    // }
 
 }
 
-.cls-1,
-.cls-2 {
+.cls-1 {
     fill: none;
     stroke-miterlimit: 10;
-}
-
-.cls-2 {
     stroke: #fffbf1;
-    stroke-opacity: 0.6;
+    stroke-opacity: 0.3;
     stroke-width: 1px;
+    stroke-linecap: round;
     filter:
         drop-shadow(1px 1px 1px rgb(44, 29, 0))
         drop-shadow(-1px -1px 1px rgb(255, 255, 255));
@@ -157,6 +141,16 @@ body {
 #CircleArt {
     mix-blend-mode: overlay;
     transform: scale(0.97);
+    @include scrollBasedAnimate(rotate);
+    animation-delay: calc(var(--scroll) * -0.6s);
+}
+
+.foo {
+    stroke: red;
+}
+
+.bar {
+    stroke: blue;
 }
 
 
