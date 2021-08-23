@@ -418,7 +418,6 @@ body {
   stroke-opacity: 0.3;
   stroke-width: 1px;
   stroke-linecap: round;
-  filter: drop-shadow(1px 1px 1px #2c1d00) drop-shadow(-1px -1px 1px white);
 }
 
 #CircleArt {
