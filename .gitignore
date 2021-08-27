@@ -2,5 +2,7 @@
 node_modules
 CNAME
 .vscode
+dist
+
 
 *.DS_Store
