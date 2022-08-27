@@ -3,6 +3,9 @@
     --whiteish: #fdf9ed;
     --whiteish: #fffdf7;
     --font-dark: var(--blackish);
+    --color-primary: #295277;
+    --color-secondary: #3c5e33;
+    --color-secondary: #e13500;
 }
 
 @mixin circle($size) {
@@ -17,11 +20,13 @@
 }
 
 @mixin scrollBasedAnimate ($keyframe) {
-    animation: $keyframe 1s linear infinite;
+    animation: $keyframe 1s linear;
     animation-play-state: paused;
     animation-iteration-count: 1;
     animation-fill-mode: both;
 }
+
+
 
 @mixin rule-large ($tblr) {
     border-#{$tblr}: 2px solid currentColor;

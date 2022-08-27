@@ -1,0 +1,45 @@
+.u-fadein {
+  animation: fadein 800ms ease-in forwards;
+}
+
+.u-delay-1 { animation-delay: 1000ms; opacity: 0; }
+.u-delay-2 { animation-delay: 1300ms; opacity: 0; }
+.u-delay-3 { animation-delay: 1600ms; opacity: 0; }
+
+.u-flex {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.u-posRelative {
+  position: relative;
+}
+
+.u-ib {
+  display: inline-block;
+  width: auto;
+}
+
+.u-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--whiteish);
+}
+
+.u-marginBottomRoot {
+  margin-bottom: 10rem;
+}
+
+.u-bg-color--primary {
+  background: var(--color-primary);
+}
+
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

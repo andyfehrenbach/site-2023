@@ -1,311 +1,99 @@
 @import '_vars';
 @import '_typography';
-@import '_adel-page';
+@import '_utilities';
 
 * {
     box-sizing: border-box;
 }
 
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        transform: translateY(0.1em);
+    }
 
-.u-flex {
-    display: flex;
-    flex-flow: row wrap;
+    50% {
+        transform: translateY(0);
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+
 }
-
-.u-ib {
-    display: inline-block;
-    width: auto;
-}
-
-.u-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--whiteish);
-}
-
-.u-marginBottomRoot {
-    margin-bottom: 10rem;
-}
-
-.sr-only {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-}
-
 
 
 body {
     padding: 0;
     margin: 0;
-    min-height: 6000px;
 }
 
-.wrapper {
-    max-width: calc(1800px - 4rem);
-    padding: 0 4rem;
-    margin: 0 auto;
-    padding-top: 2rem;
-    min-height: 100vh;
-    position: relative;
+.bg-image {
+    object-fit: cover;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: fixed;
 }
 
-.Header {
-    @include rule-large(top);
-    padding-top: 1.8rem;
-    flex-direction: row-reverse;
-    gap: 4rem;
+@keyframes changecolor {
+    to { background-color: var(--color-secondary); }
 }
 
-.Header-description {
-    position: relative;
+.img-overlay {
+    background-color: var(--color-primary);
+    mix-blend-mode: screen;
+    // animation: changecolor 1s linear both;
+    @include scrollBasedAnimate(changecolor);
+    animation-delay: calc(var(--scroll) * -0.0009s);
+    position: fixed;
     z-index: 1;
 }
 
-@keyframes rotate {
-    100% {
-        transform: rotate(180deg);
-        @include circle(75vh);
-        bottom: 5rem;
-        right: 4rem;
-    }
-}
-
-@keyframes rotate-overlayer {
-    100% {
-        @include circle(75vh);
-        bottom: 5rem;
-        right: 4rem;
-    }
-}
-
-.Spot {
-    position: absolute;
-    @include circle(75vh);
-    border-radius: 50%;
-    background:
-        radial-gradient(circle at 40% 30%, #F7DC9DCC 0%, #AF8B4AC7 46%, #2d1e00e0 80%),
-        radial-gradient(circle at left bottom, #F7DC9D 25%, #AF8B4A69 46%, #f3c364e3 60%);
-    // background:
-    //     radial-gradient(circle at 80% 80%, rgb(225, 188, 128) 0%, 18.0233%, rgb(163, 130, 76) 36.0465%, 68.0233%,  rgb(71, 49, 21) 100%),
-    //     radial-gradient(circle at 40% 30%, rgb(225, 188, 128) 0%, 18.0233%, rgb(163, 130, 76) 36.0465%, 68.0233%,  rgb(71, 49, 21) 100%);
-    right: 4rem;
-    bottom: 5rem;
-    z-index: -1;
-
-    &.is-animated {
-        @include scrollBasedAnimate(rotate);
-        animation-delay: calc(var(--scroll) * -0.99s);
-
-    }
-}
-
-.Spot-overLayer {
-    position: absolute;
-    @include circle(75vh);
-    filter: url("#roughpaper");
-    opacity: 0.78;
-    mix-blend-mode: color-burn;
-    right: 0;
-    bottom: 0;
-    // Allows the spot to sit under name text, but over other spot layers
-    z-index: -1;
-    clip-path: circle(50% at 50% 50%);
-
-    // &.is-animated {
-    //     @include scrollBasedAnimate(rotate-overlayer);
-    //     animation-delay: calc(var(--scroll) * -0.99s);
-    // }
-
-}
-
-.cls-1 {
-    fill: none;
-    stroke-miterlimit: 10;
-    stroke: #fffbf1;
-    stroke-opacity: 0.3;
-    stroke-width: 1px;
-    stroke-linecap: round;
-    // filter:
-        // drop-shadow(1px 1px 1px rgb(44, 29, 0))
-        // drop-shadow(-1px -1px 1px rgb(255, 255, 255));
-}
-
-#CircleArt {
-    mix-blend-mode: overlay;
-    transform: scale(0.97);
-    @include scrollBasedAnimate(rotate);
-    animation-delay: calc(var(--scroll) * -0.6s);
-}
-
-.foo {
-    stroke: red;
-}
-
-.bar {
-    stroke: blue;
-}
-
-
-
-
-
-.Header-name {
-    flex: 1;
-}
-
-.Header-description {
-    flex: 1;
-}
-
-@keyframes nav-transform {
-    to {
-        transform: translateY(-20vh);
-    }
-}
-
-.Nav-clipper {
+.header {
+    background-color:var(--color-primary);
+    // overflow: scroll;
     position: relative;
-    overflow: hidden;
-    width: 37%;
+    padding: 4rem 6rem;
+    z-index: 2;
+    @include scrollBasedAnimate(changecolor);
+    animation-delay: calc(var(--scroll) * -0.0009s);
+    margin-left: auto;
+    max-width: 50vw;
+
+    // &::after {
+    //     content: '';
+    //     position: absolute;
+    //     inset: 0;
+    //     background: url(../assets/noise.svg);
+    //     mix-blend-mode: multiply;
+    //     z-index: -1;
+    //     filter: contrast(100%) brightness(500%);
+    // }
 }
 
-.Nav {
-    &.is-animated {
-        @include scrollBasedAnimate(nav-transform);
-        animation-delay: calc(var(--scroll) * -2s);
+.stylized-tagline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    filter:
+        drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.4))
+        blur(0.3px);
+        filter: blur(0.3px);
+    span {
+        @extend .heading-1;
+        white-space: nowrap;
 
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
     }
 }
 
-.Nav-header {
-    margin-bottom: 1.6rem;
-}
 
-.Work-list {
-    font-size: 1.9rem;
-    padding-left: 0;
 
-    & li:not(:last-child) {
-        @include rule-small(bottom);
-        margin-bottom: 0.8rem;
-        padding-bottom: 0.6rem;
-    }
-}
 
 .hidden {
     display: none;
 }
 
-@media (max-width: 550px) {
-    .Header {
-        display: block;
-        margin-bottom: 3rem;
-    }
-
-    .Header-name {
-        margin-bottom: 1rem;
-    }
-
-    .Header-description {
-        width: 65%;
-    }
-
-    .wrapper {
-        padding: 1rem;
-        // height: 100vh;
-        width: 100vw;
-        margin: 0;
-        // overflow: hidden;
-    }
-
-    .u-overlay,
-    body {
-        width: 100vw;
-        // height: 100vh;
-        // overflow: hidden;
-    }
-
-    .Work-list {
-        font-size: 1.2rem;
-
-        & li:not(:last-child) {
-            margin-bottom: 0.6rem;
-            padding-bottom: 0.4rem;
-        }
-
-    }
-
-    .Nav-clipper {
-        width: 100%;
-    }
-
-    .Spot,
-    .Spot-overLayer {
-        right: -67%;
-        bottom: 15%;
-        @include circle(65vh);
-    }
-
-    .ProjectPage-viewmaster {
-        height: 55vh;
-
-        & img {
-            animation-delay: calc(var(--scroll) * -2.5s);
-        }
-    }
-
-    .ProjectPage-kicker {
-        font-size: 1.5rem;
-        width: 80%;
-        position: static;
-        padding-left: 0;
-    }
-
-    .ProjectPage-opener {
-        width: 100%;
-        margin-bottom: 5rem;
-    }
-
-    .ProjectPage section {
-        margin-bottom: 5rem;
-    }
-
-    .ProjectPage-header {
-        position: static;
-
-    }
-
-    .push-down {
-        margin-top: 3rem;
-    }
-
-    figcaption {
-        padding-top: 1rem;
-    }
-
-    figure {
-        margin-top: 3rem;
-    }
-
-
-    body {
-        height: initial;
-        min-height: initial;
-    }
-
-    .LandingPage .wrapper {
-        height: 100vh;
-        overflow: hidden;
-    }
-
-
-
-}
