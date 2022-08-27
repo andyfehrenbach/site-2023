@@ -6,23 +6,6 @@
     box-sizing: border-box;
 }
 
-@keyframes fadein {
-    0% {
-        opacity: 0;
-        transform: translateY(0.1em);
-    }
-
-    50% {
-        transform: translateY(0);
-        opacity: 0.3;
-    }
-    100% {
-        opacity: 1;
-    }
-
-}
-
-
 body {
     padding: 0;
     margin: 0;
@@ -78,8 +61,8 @@ body {
     align-items: center;
     filter:
         drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.4))
-        blur(0.3px);
-        filter: blur(0.3px);
+        blur(0.4px);
+    filter: blur(0.7px);
     span {
         @extend .heading-1;
         white-space: nowrap;
@@ -90,10 +73,27 @@ body {
     }
 }
 
-
-
-
 .hidden {
     display: none;
 }
+
+@media (max-width: 575.98px) {
+    .u-flex {
+        display: block;
+    }
+
+    .header {
+        max-width: none;
+        margin-top:85vh;
+        padding: 3rem;
+    }
+
+    .logo {
+        position: absolute;
+    }
+
+    .bg-image {
+        height: 85vh;
+    }
+ }
 

@@ -58,20 +58,18 @@ ul {
 
 .heading-1 {
     font-family: 'Tanker', sans-serif;
-    font-family: "Bebas Neue", sans-serif;
-    font-size: calc(4rem + 8vh);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: max(5rem, 8.5vw);
     font-weight: 700;
-    line-height: 0.7;
+    line-height: 0.8;
     letter-spacing: 0.04em;
     color: var(--whiteish);
-    // opacity: 0.98;
-    // color: var(--color-primary);
 }
 
 .heading-2 {
     margin: 0;
     @extend .heading-1;
-    font-size: 3rem !important;
+    font-size: max(2.7rem, 4vw) !important;
     letter-spacing: 0.4;
     line-height: 1;
     text-align: center;
@@ -105,42 +103,19 @@ p {
 hr {
     border: 1px solid white;
     width: 25%;
-    margin-bottom: 2.8rem;
-    margin-top: 1.8rem;
+    margin-bottom: 4.1rem;
+    margin-top: 1.9rem;
 }
 
 .logo {
-    font-size: 3rem;
+    font-size: max(3rem, 3.8vw);
     position:relative;
-    top: 2rem;
-    left: 2rem;
+    top: 3rem;
+    left: 2.75rem;
     z-index: 3;
     color: var(--color-primary);
     color: var(--whiteish);
     letter-spacing: 0.15em;
     position: fixed;
-}
-
-
-
-@media screen and (max-width: 550px) {
-
-    .heading-1 { font-size: 3rem; }
-    .heading-2 { font-size: 1rem; }
-    .heading-3 { font-size: 2rem; }
-    .heading-4 { font-size: 1.2rem; }
-    .heading-5 {font-size: 1.5rem; }
-
-    .is-locked, .new-tab {
-        &::before,
-        &::after {
-            display: none;
-        }
-    }
-
-    p {
-        margin-top: 2rem;
-    }
-
-
+    line-height: 1;
 }
