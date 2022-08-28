@@ -1,5 +1,5 @@
 :root {
-  --blackish: #272821;
+  --blackish: #0e0f0cde;
   --whiteish: #f9f0eb;
   --font-dark: var(--blackish);
 }
@@ -12,21 +12,28 @@
 }
 
 .colors-2 {
-  --color-primary: #C0E2E3;
-  --color-secondary: #F0E7DF;
-  --color-text: #DE4E40;
+  --color-primary: #c0e2e3;
+  --color-secondary: #f0e7df;
+  --color-text: #de4e40;
   --image-effect: multiply;
 }
 
 .colors-3 {
   --color-primary: #f1bfb1;
-  --color-secondary: #B5D7CF;
+  --color-secondary: #b5d7cf;
+  --color-text: var(--blackish);
+  --image-effect: multiply;
+}
+
+.colors-4 {
+  --color-primary: #fbbc00;
+  --color-secondary: #fb6538;
   --color-text: var(--blackish);
   --image-effect: multiply;
 }
 
 * {
-  font-family: "Spectral", serif;
+  font-family: "Bebas Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -46,42 +53,26 @@ a {
   color: inherit;
   text-decoration: none;
   position: relative;
+  cursor: pointer;
 }
 a::before {
   content: "";
   position: absolute;
-  background: linear-gradient(to right, #E9C885 20%, #CEAB64);
+  background: currentColor;
   left: -0.05em;
-  top: 30%;
-  bottom: 30%;
+  bottom: -0.1em;
+  height: 0.15em;
   width: 0;
-  transition: right 300ms ease-out;
+  transition: right 200ms ease-out;
   right: 100%;
-  transition: right 300ms ease-out;
-  transform: skewX(-13deg);
-  z-index: -1;
 }
 a:hover::before {
   width: auto;
-  right: -0.05em;
+  right: 0;
 }
 
-ul {
-  list-style-type: none;
-}
-ul li {
-  font-size: inherit;
-  font-style: italic;
-  padding-right: 3rem;
-}
-ul li a {
-  font-size: inherit;
-}
-
-.heading-1, .stylized-tagline span, .heading-2 {
-  font-family: "Tanker", sans-serif;
-  font-family: "Bebas Neue", sans-serif;
-  font-size: max(5rem, 8.5vw);
+.heading-1, .stylized-tagline span, .logo-type > .logo-color-span, .logo-type, .heading-3, .heading-2 {
+  font-size: max(5rem, 8.3vw);
   font-weight: 700;
   line-height: 0.8;
   letter-spacing: 0.04em;
@@ -90,29 +81,40 @@ ul li a {
 
 .heading-2 {
   margin: 0;
-  font-size: max(2.7rem, 4vw) !important;
-  letter-spacing: 0.4;
+  font-size: max(2.7rem, 3.3vw) !important;
+  line-height: 1;
+  text-align: center;
+}
+
+.heading-3 {
+  margin: 0;
+  font-size: max(1rem, 1.7vw) !important;
   line-height: 1;
   text-align: center;
 }
 
 hr {
-  border: 1px solid var(--color-text);
-  width: 25%;
-  margin-bottom: 4.1rem;
-  margin-top: 1.9rem;
+  border: 2px solid var(--color-text);
+  width: 20%;
+  margin-bottom: 2.1rem;
+  margin-top: 0.9rem;
 }
 
-.logo {
-  font-size: max(3rem, 3.8vw);
-  position: relative;
-  top: 3rem;
-  left: 2.75rem;
-  z-index: 3;
-  color: var(--color-text);
-  letter-spacing: 0.15em;
-  position: fixed;
+.logo-type {
+  font-size: max(2.5rem, 3.8vw);
   line-height: 1;
+  letter-spacing: 0.1em;
+}
+.logo-type > .logo-color-span {
+  font-size: inherit;
+  color: var(--color-primary);
+  letter-spacing: 0.3em;
+  animation: changetext 1s linear;
+  animation-play-state: paused;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-delay: calc(var(--scroll) * -0.0009s);
+  margin-left: 0.7rem;
 }
 
 @keyframes fadein {
@@ -204,11 +206,19 @@ hr {
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   padding: 0;
   margin: 0;
+}
+
+.logo {
+  top: 2rem;
+  left: 2.75rem;
+  z-index: 3;
+  position: fixed;
 }
 
 .bg-image {
@@ -223,6 +233,11 @@ body {
 @keyframes changecolor {
   to {
     background-color: var(--color-secondary);
+  }
+}
+@keyframes changetext {
+  to {
+    color: var(--color-secondary);
   }
 }
 .img-overlay {
@@ -240,7 +255,7 @@ body {
 .header {
   background-color: var(--color-primary);
   position: relative;
-  padding: 4rem 6rem;
+  padding: 3rem 6rem;
   z-index: 2;
   animation: changecolor 1s linear;
   animation-play-state: paused;
@@ -255,7 +270,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.4)) blur(0.4px);
   filter: blur(0.02rem);
 }
 .stylized-tagline span {
@@ -282,6 +296,7 @@ body {
 
   .logo {
     position: absolute;
+    left: 1.75rem;
   }
 
   .bg-image {
