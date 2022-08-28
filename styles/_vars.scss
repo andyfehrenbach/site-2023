@@ -1,11 +1,26 @@
 :root {
-    --blackish: #040415;
-    --whiteish: #fdf9ed;
-    --whiteish: #fffdf7;
+    --blackish: #272821;
+    --whiteish: #f9f0eb;
     --font-dark: var(--blackish);
-    --color-primary: #295277;
-    --color-secondary: #3c5e33;
-    // --color-secondary: #db3b0a;
+}
+
+.colors-1 {
+    --color-primary: #395a77;
+    --color-secondary: #2f4639;
+    --color-text: var(--whiteish);
+    --image-effect: screen;
+}
+.colors-2 {
+    --color-primary: #C0E2E3;
+    --color-secondary: #F0E7DF;
+    --color-text: #DE4E40;
+    --image-effect: multiply;
+}
+.colors-3 {
+    --color-primary: #f1bfb1;
+    --color-secondary: #B5D7CF;
+    --color-text: var(--blackish);
+    --image-effect: multiply;
 }
 
 @mixin circle($size) {

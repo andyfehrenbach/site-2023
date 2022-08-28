@@ -25,7 +25,7 @@ body {
 
 .img-overlay {
     background-color: var(--color-primary);
-    mix-blend-mode: screen;
+    mix-blend-mode: var(--image-effect);
     // animation: changecolor 1s linear both;
     @include scrollBasedAnimate(changecolor);
     animation-delay: calc(var(--scroll) * -0.0009s);
