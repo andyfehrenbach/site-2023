@@ -17,6 +17,7 @@ body {
     width: 100vw;
     overflow: hidden;
     position: fixed;
+    object-position: left;
 }
 
 @keyframes changecolor {
@@ -62,7 +63,7 @@ body {
     filter:
         drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.4))
         blur(0.4px);
-    filter: blur(0.7px);
+    filter: blur(0.02rem);
     span {
         @extend .heading-1;
         white-space: nowrap;
