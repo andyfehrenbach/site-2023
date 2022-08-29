@@ -335,7 +335,8 @@ body {
   .header {
     max-width: none;
     margin-top: 66vh;
-    padding: 3rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .logo {
