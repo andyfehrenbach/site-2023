@@ -89,6 +89,10 @@ body {
   border-top: 1px solid var(--color-text);
 }
 
+.credits-wrapper {
+  width: 45%;
+}
+
 .hidden {
   display: none;
 }
@@ -121,7 +125,7 @@ body {
 
   .header {
     max-width: none;
-    margin-top: 85vh;
+    margin-top: 66vh;
     padding: 3rem;
   }
 
@@ -131,12 +135,21 @@ body {
   }
 
   .bg-image {
-    height: 85vh;
+    height: 66vh;
+  }
+
+  .credits-wrapper {
+    width: 100%;
   }
 }
 
 @media (hover: none) {
   .touch-link::before {
     right: 0;
+    width: auto;
+  }
+
+  .stylized-tagline {
+    filter: none;
   }
 }

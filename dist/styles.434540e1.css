@@ -112,7 +112,7 @@ hr {
 }
 
 .logo-type {
-  font-size: max(2.5rem, 3.8vw);
+  font-size: max(2.2rem, 3.8vw);
   line-height: 1;
   letter-spacing: 0.1em;
 }
@@ -302,6 +302,10 @@ body {
   border-top: 1px solid var(--color-text);
 }
 
+.credits-wrapper {
+  width: 45%;
+}
+
 .hidden {
   display: none;
 }
@@ -330,7 +334,7 @@ body {
 
   .header {
     max-width: none;
-    margin-top: 85vh;
+    margin-top: 66vh;
     padding: 3rem;
   }
 
@@ -340,12 +344,21 @@ body {
   }
 
   .bg-image {
-    height: 85vh;
+    height: 66vh;
+  }
+
+  .credits-wrapper {
+    width: 100%;
   }
 }
 @media (hover: none) {
   .touch-link::before {
     right: 0;
+    width: auto;
+  }
+
+  .stylized-tagline {
+    filter: none;
   }
 }
 
