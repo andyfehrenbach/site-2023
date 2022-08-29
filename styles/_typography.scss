@@ -1,5 +1,5 @@
 * {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Bebas Neue rev=2', 'Bebas Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -13,6 +13,7 @@ ul,
 li {
   margin: 0;
   color: var(--font-dark);
+  letter-spacing: 0.04em;
 }
 
 a {
@@ -27,7 +28,7 @@ a {
     background: currentColor;
     left: -0.05em;
     bottom: -0.1em;
-    height: 0.15em;
+    height: 0.12em;
     width: 0;
     transition: right 200ms ease-out;
     right: 100%;
@@ -41,11 +42,14 @@ a {
 
 .heading-1 {
   // font-family: 'Tanker', sans-serif;
-  font-size: max(5rem, 8.3vw);
+  // font-size: max(5rem, 8.3vw);
+  // line-height: 0.8;
+  // letter-spacing: 0.04em;
   font-weight: 700;
-  line-height: 0.8;
-  letter-spacing: 0.04em;
   color: var(--color-text);
+  font-size: max(5rem, 10vw);
+  line-height: 0.85;
+  letter-spacing: 0.02em;
 }
 
 .heading-2 {
@@ -54,21 +58,31 @@ a {
   font-size: max(2.7rem, 3.3vw) !important;
   line-height: 1;
   text-align: center;
+  letter-spacing: 0.01em;
+  font-weight: 400;
 }
 
 .heading-3 {
   margin: 0;
   @extend .heading-1;
-  font-size: max(1rem, 1.7vw) !important;
+  font-size: max(1.2rem, 1.7vw) !important;
   line-height: 1;
   text-align: center;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+}
+
+p {
+  color: var(--color-text);
+  font-weight: 400;
+  letter-spacing: 0.06em;
 }
 
 hr {
-  border: 2px solid var(--color-text);
+  border: 1px solid var(--color-text);
   width: 20%;
-  margin-bottom: 2.1rem;
-  margin-top: 0.9rem;
+  margin-bottom: 1.6rem;
+  margin-top: 1rem;
 }
 
 .logo-type {
