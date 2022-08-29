@@ -93,6 +93,27 @@ body {
   display: none;
 }
 
+// Website carbon calculator stuff
+
+/* Inline #2 | http://localhost:1234/ */
+
+#wcb.carbonbadge {
+  --b1: var(--color-text) !important;
+  --b2: var(--color-text) !important;
+  text-align: left !important;
+  // mix-blend-mode: multiply !important;
+}
+
+#wcb #wcb_a {
+  border-radius: 0 0 0 0 !important;
+  color: var(--color-secondary) !important;
+}
+
+#wcb #wcb_g {
+  border-radius: 0 !important;
+  background-color: transparent !important;
+}
+
 @media (max-width: 575.98px) {
   .u-flex {
     display: block;

@@ -186,6 +186,14 @@ hr {
   flex-flow: row wrap;
 }
 
+.u-noWrap {
+  flex-wrap: nowrap;
+}
+
+.u-alignItemsEnd {
+  align-items: flex-end;
+}
+
 .u-posRelative {
   position: relative;
 }
@@ -296,6 +304,23 @@ body {
 
 .hidden {
   display: none;
+}
+
+/* Inline #2 | http://localhost:1234/ */
+#wcb.carbonbadge {
+  --b1: var(--color-text) !important;
+  --b2: var(--color-text) !important;
+  text-align: left !important;
+}
+
+#wcb #wcb_a {
+  border-radius: 0 0 0 0 !important;
+  color: var(--color-secondary) !important;
+}
+
+#wcb #wcb_g {
+  border-radius: 0 !important;
+  background-color: transparent !important;
 }
 
 @media (max-width: 575.98px) {
