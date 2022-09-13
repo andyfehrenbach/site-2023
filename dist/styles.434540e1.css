@@ -247,8 +247,21 @@ body {
   overflow: hidden;
   position: fixed;
   object-position: left;
+  animation: move-image 1s linear;
+  animation-play-state: paused;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-delay: calc(var(--scroll) * -0.0009s);
 }
 
+@keyframes move-image {
+  50% {
+    transform: translateX(-25%) translateY(0) scale(1.35);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-25%) scale(1.7);
+  }
+}
 @keyframes changecolor {
   to {
     background-color: var(--color-secondary);
@@ -350,6 +363,12 @@ body {
 
   .credits-wrapper {
     width: 100%;
+  }
+
+  @keyframes move-image {
+    to {
+      transform: translateY(-50%) scale(1.7);
+    }
   }
 }
 @media (hover: none) {
