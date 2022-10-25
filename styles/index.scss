@@ -96,20 +96,20 @@ body {
 }
 
 .portfolio {
-    text-align: center;
-    margin-top: 1rem;
+  text-align: center;
+  margin-top: 1rem;
 
-    .link {
-        margin-right: 1rem;
-        margin-left: 1rem;
+  .link {
+    margin-right: 1rem;
+    margin-left: 1rem;
 
-        &:not(:last-child)::after {
-            content: '';
-            border-right: 2px solid;
-            position: relative;
-            right: -1.1rem;
-        }
+    &:not(:last-child)::after {
+      content: '';
+      border-right: 2px solid;
+      position: relative;
+      right: -1.1rem;
     }
+  }
 }
 
 .credits {
@@ -154,18 +154,19 @@ body {
 
   .header {
     max-width: none;
-    margin-top: 66vh;
+    margin-top: 100vh;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
 
   .logo {
     position: absolute;
-    left: 1.75rem;
+    left: 5rem;
+    top: 5rem;
   }
 
   .bg-image {
-    height: 66vh;
+    height: 100vh;
   }
 
   .credits-wrapper {
