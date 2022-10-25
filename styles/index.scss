@@ -13,8 +13,8 @@ body {
 }
 
 .logo {
-  top: 2rem;
-  left: 2.75rem;
+  top: 4.5rem;
+  left: 4.5rem;
   z-index: 3;
   position: fixed;
 }
@@ -93,6 +93,14 @@ body {
   span {
     white-space: nowrap;
   }
+}
+
+.portfolio {
+    .link {
+        margin-right: 0.6rem;
+        border-right: 2px solid;
+        padding-right: 1rem;
+    }
 }
 
 .credits {
