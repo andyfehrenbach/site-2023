@@ -96,10 +96,19 @@ body {
 }
 
 .portfolio {
+    text-align: center;
+    margin-top: 1rem;
+
     .link {
-        margin-right: 0.6rem;
-        border-right: 2px solid;
-        padding-right: 1rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+
+        &:not(:last-child)::after {
+            content: '';
+            border-right: 2px solid;
+            position: relative;
+            right: -1.1rem;
+        }
     }
 }
 

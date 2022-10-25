@@ -62,7 +62,7 @@ li {
   background: currentColor;
   left: -0.05em;
   bottom: -0.1em;
-  height: 0.12em;
+  height: 2px;
   width: 0;
   transition: right 200ms ease-out;
   right: 100%;
@@ -331,10 +331,19 @@ body {
   white-space: nowrap;
 }
 
+.portfolio {
+  text-align: center;
+  margin-top: 1rem;
+}
 .portfolio .link {
-  margin-right: 0.6rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+.portfolio .link:not(:last-child)::after {
+  content: "";
   border-right: 2px solid;
-  padding-right: 1rem;
+  position: relative;
+  right: -1.1rem;
 }
 
 .credits {
